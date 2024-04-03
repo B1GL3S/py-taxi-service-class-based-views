@@ -1,11 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>Driver: {{ driver.first_name }} {{ driver.last_name }}</h1>
-  <p><strong>Aka: {{ driver.username }}</strong></p>
-  <p><strong>Drivers license: {{ driver.license_number }}</strong></p>
+  <h1>Drivers cars</h1>
   <div class="ml-3">
-    <h3>Cars</h3>
     <ul>
       {% for car in driver.cars.all %}
         <li><strong>{{ car.model }}</strong></li>
